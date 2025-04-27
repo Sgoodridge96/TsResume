@@ -1,0 +1,51 @@
+"use strict";
+
+document.addEventListener("DOMContentLoaded", function () {
+  var leftContainer = document.querySelector(".left-container");
+  var links = document.querySelectorAll(".left-container a");
+  var rightItems = document.querySelectorAll(".right-container-item");
+
+  // Animations are smooth
+  function scaleElement(element, scale) {
+    element.style.transition = "transform 0.3s ease";
+    element.style.transform = "scale(".concat(scale, ")");
+  }
+
+  // Hover over Links animation
+  if (leftContainer) {
+    leftContainer.addEventListener("mouseenter", function () {
+      return scaleElement(leftContainer, 1.05);
+    });
+    leftContainer.addEventListener("mouseleave", function () {
+      return scaleElement(leftContainer, 1);
+    });
+  }
+  links.forEach(function (link) {
+    link.addEventListener("mouseenter", function () {
+      return scaleElement(link, 1.1);
+    });
+    link.addEventListener("mouseleave", function () {
+      return scaleElement(link, 1);
+    });
+  });
+
+  // Hide or show the right container items
+  rightItems.forEach(function (item) {
+    var paragraph = item.querySelector("p");
+    if (paragraph) {
+      // Hide until user hovers over 
+      paragraph.style.opacity = "0";
+      paragraph.style.maxHeight = "0";
+      paragraph.style.overflow = "hidden";
+      paragraph.style.transition = "opacity 0.3s ease, max-height 0.3s ease";
+      item.addEventListener("mouseenter", function () {
+        paragraph.style.opacity = "1";
+        paragraph.style.maxHeight = "500px";
+      });
+      item.addEventListener("mouseleave", function () {
+        paragraph.style.opacity = "0";
+        paragraph.style.maxHeight = "0";
+      });
+    }
+  });
+});

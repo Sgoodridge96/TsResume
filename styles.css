@@ -12,6 +12,8 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
+  -webkit-animation: fadeIn 1s ease-in-out;
+          animation: fadeIn 1s ease-in-out;
 }
 
 .main-content {
@@ -52,7 +54,6 @@ body {
   text-align: center;
   margin-top: auto;
 }
-
 .footer a {
   color: #ffffff;
   text-decoration: underline;
@@ -117,9 +118,21 @@ body {
 .container .left-container div a {
   display: inline-block;
   margin: 0.5rem;
-  color: #3498db;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  background-color: #3498db;
+  color: #ffffff;
   font-weight: bold;
   text-decoration: none;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.container .left-container div a:hover {
+  background-color: #217dbb;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .container .right-container {
   -webkit-box-flex: 1;
@@ -137,10 +150,33 @@ body {
 }
 .container .right-container ul li {
   margin-bottom: 1.5rem;
+  background-color: #f4f6f8;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.container .right-container ul li:hover {
+  background-color: white;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .container .right-container ul li p {
   margin-top: 0.5rem;
   line-height: 1.5;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: opacity 0.3s ease, max-height 0.3s ease;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
 }
 
 .resume-container {

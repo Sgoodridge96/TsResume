@@ -77,8 +77,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    animation: fadeIn 1s ease-in-out;
 }
-
 .main-content {
     flex-grow: 1;
 }
@@ -94,11 +94,10 @@ body {
     @include footer-style($footer-background, $white-color, $font-size-small, $padding-base);
     text-align: center;
     margin-top: auto;
-}
-
-.footer a {
+        a {
     color: $white-color;
     text-decoration: underline;
+    }
 }
 
 // Index Page Layout
@@ -143,9 +142,19 @@ body {
         div a {
             display: inline-block;
             margin: 0.5rem;
-            color: $accent-color;
+            padding: 0.6rem 1.2rem;
+            border-radius: $border-radius;
+            background-color: $accent-color;
+            color: $white-color;
             font-weight: bold;
             text-decoration: none;
+            box-shadow: $box-shadow;
+
+            &:hover {
+                background-color: darken($accent-color, 10%);
+                box-shadow: $box-shadow;
+                transform: scale(1.1);
+            }
         }
     }
 
@@ -162,10 +171,26 @@ body {
 
             li {
                 margin-bottom: 1.5rem;
+                background-color: $background-color;
+                padding: 1rem;
+                border-radius: $border-radius;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+                box-shadow: $box-shadow;
+                position: relative;
 
+                &:hover {
+                    background-color: lighten($background-color, 5%);
+                    transform: scale(1.02);
+                    box-shadow: $box-shadow;
+                }
                 p {
                     margin-top: 0.5rem;
                     line-height: 1.5;
+                    opacity: 0;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: opacity 0.3s ease, max-height 0.3s ease;
                 }
             }
         }

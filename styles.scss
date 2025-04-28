@@ -243,6 +243,8 @@ body {
     .project {
         display: flex;
         flex-wrap: wrap;
+        width: 90%;
+        margin: 0 auto;
         gap: 2rem;
         background: $white-color;
         border-radius: $border-radius;
@@ -259,7 +261,7 @@ body {
             flex: 1;
 
             h2 {
-                margin: 0 0 0.5rem 0;
+                margin-top: 0.5rem;
             }
 
             p {
@@ -268,10 +270,17 @@ body {
             }
 
             a {
-                color: $accent-color;
+                display: inline-block;
+                padding: 0.5rem 1rem;
+                border-radius: $border-radius;
+                background-color: $accent-color;
+                color: $white-color;
                 font-weight: bold;
                 text-decoration: none;
+                box-shadow: $box-shadow;
+
             }
         }
     }
 }
+

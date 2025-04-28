@@ -240,6 +240,8 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
   gap: 2rem;
   background: #ffffff;
   border-radius: 10px;
@@ -258,14 +260,20 @@ body {
           flex: 1;
 }
 .projects-container .project .project-text h2 {
-  margin: 0 0 0.5rem 0;
+  margin-top: 0.5rem;
 }
 .projects-container .project .project-text p {
   margin-bottom: 0.5rem;
   line-height: 1.5;
 }
 .projects-container .project .project-text a {
-  color: #46767e;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background-color: #46767e;
+  color: #ffffff;
   font-weight: bold;
   text-decoration: none;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

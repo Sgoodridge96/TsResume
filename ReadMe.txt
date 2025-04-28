@@ -17,3 +17,6 @@ Challenges:
 of JaveScript.  Moving this website from JavaScript to TypeScript was a bit more of a challenge than I initially anticipated, 
 but overall, the look and feel of the website was what I was aiming for. 
 
+Bugs:
+    In its current state, the webpage doesn't include the promotional video for RePoste even with the button there.  Our
+team is still creating this video and will have it implemented as soon as the video is finished.

@@ -3,17 +3,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const links = document.querySelectorAll(".left-container a");
     const rightItems = document.querySelectorAll(".right-container-item");
 
-    // Animations are smooth
+    // Smooth animations
     function scaleElement(element: HTMLElement, scale: number) {
-        element.style.transition = "transform 0.3s ease";
+        element.style.transition = "transform 0.3s ease, box-shadow 0.3s ease";
         element.style.transform = `scale(${scale})`;
     }
 
-    // Hover over Links animation
+    // Hover over left container animation
     if (leftContainer) {
         leftContainer.addEventListener("mouseenter", () => scaleElement(leftContainer, 1.05));
         leftContainer.addEventListener("mouseleave", () => scaleElement(leftContainer, 1));
     }
+
+    // Hover over Links animation
     links.forEach(link => {
         link.addEventListener("mouseenter", () => scaleElement(link as HTMLElement, 1.1));
         link.addEventListener("mouseleave", () => scaleElement(link as HTMLElement, 1));
@@ -23,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
     rightItems.forEach(item => {
         const paragraph = item.querySelector("p") as HTMLElement;
         if (paragraph) {
-
             // Hide until user hovers over 
             paragraph.style.opacity = "0";
             paragraph.style.maxHeight = "0";

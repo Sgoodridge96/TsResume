@@ -5,13 +5,13 @@ document.addEventListener("DOMContentLoaded", function () {
   var links = document.querySelectorAll(".left-container a");
   var rightItems = document.querySelectorAll(".right-container-item");
 
-  // Animations are smooth
+  // Smooth animations
   function scaleElement(element, scale) {
-    element.style.transition = "transform 0.3s ease";
+    element.style.transition = "transform 0.3s ease, box-shadow 0.3s ease";
     element.style.transform = "scale(".concat(scale, ")");
   }
 
-  // Hover over Links animation
+  // Hover over left container animation
   if (leftContainer) {
     leftContainer.addEventListener("mouseenter", function () {
       return scaleElement(leftContainer, 1.05);
@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
       return scaleElement(leftContainer, 1);
     });
   }
+
+  // Hover over Links animation
   links.forEach(function (link) {
     link.addEventListener("mouseenter", function () {
       return scaleElement(link, 1.1);

@@ -179,11 +179,6 @@ body {
                 box-shadow: $box-shadow;
                 position: relative;
 
-                &:hover {
-                    background-color: lighten($background-color, 5%);
-                    transform: scale(1.02);
-                    box-shadow: $box-shadow;
-                }
                 p {
                     margin-top: 0.5rem;
                     line-height: 1.5;

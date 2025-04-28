@@ -162,13 +162,6 @@ body {
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
 }
-.container .right-container ul li:hover {
-  background-color: #f4f6fa;
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
-  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 .container .right-container ul li p {
   margin-top: 0.5rem;
   line-height: 1.5;

@@ -1,10 +1,10 @@
 // Variables
-$primary-color: #2c3e50;
-$secondary-color: #34495e;
-$accent-color: #3498db;
+$primary-color: #2e3b4e;
+$secondary-color: #4e5d6a;
+$accent-color: #46767e;
 $white-color: #ffffff;
-$background-color: #f4f6f8;
-$footer-background: #1f2d3d;
+$background-color: #e3e9f1;
+$footer-background: #25303f;
 
 $font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 $font-size-small: 0.9rem;
@@ -91,7 +91,7 @@ body {
 
 // Footer
 .footer {
-    @include footer-style($footer-background, $white-color, $font-size-small, $padding-base);
+    @include footer-style($primary-color, $white-color, $font-size-small, $padding-base);
     text-align: center;
     margin-top: auto;
         a {

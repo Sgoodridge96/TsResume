@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
   rightItems.forEach(function (item) {
     var paragraph = item.querySelector("p");
     if (paragraph) {
-      // Hide until user hovers over 
       paragraph.style.opacity = "0";
       paragraph.style.maxHeight = "0";
       paragraph.style.overflow = "hidden";

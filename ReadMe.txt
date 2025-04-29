@@ -4,13 +4,13 @@ TypeScript Resume Write Up
 
 Github Link: https://github.com/Sgoodridge96/TsResume
 
-This is a Resume website for assignment 5 in COS 320.  This website incorporates all the knowledge
+    This is a Resume website for assignment 5 in COS 320.  This website incorporates all the knowledge
 I've gathered throughout the course to build a Resume/Portfolo website with HTML, SCSS, and TypeScript.
 I've used TypeScript to make the webpage interactive and give the user feedback when browsing the page.
 SCSS was used to shape the structure of the webpage and the HTML was used for the basic format and 
 information about me.
 
-Each page has links to either bring you to my personal GitHub, LinkedIn, and projects, as well as options to also
+    Each page has links to either bring you to my personal GitHub, LinkedIn, and projects, as well as options to also
 download my Resume to look at it for themselves.  I plan to update this as I continue my professional career
 and use the current layout as building blocks for future implementations.  
 

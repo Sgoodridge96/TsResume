@@ -3,22 +3,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const links = document.querySelectorAll(".left-container a");
     const rightItems = document.querySelectorAll(".right-container-item");
 
-    // Smooth animations
-    function scaleElement(element: HTMLElement, scale: number) {
-        element.style.transition = "transform 0.3s ease, box-shadow 0.3s ease";
-        element.style.transform = `scale(${scale})`;
+    // Smooth scale animation when hovering
+    function scaleElementOnEnter(element: HTMLElement) {
+        element.style.transition = "transform 0.3s ease";
+        element.style.transform = "scale(1.05)";
+    }
+
+    function scaleElementOnLeave(element: HTMLElement) {
+        element.style.transition = "transform 0.3s ease";
+        element.style.transform = "scale(1)";
     }
 
     // Hover over left container animation
     if (leftContainer) {
-        leftContainer.addEventListener("mouseenter", () => scaleElement(leftContainer, 1.05));
-        leftContainer.addEventListener("mouseleave", () => scaleElement(leftContainer, 1));
+        leftContainer.addEventListener("mouseenter", () => scaleElementOnEnter(leftContainer));
+        leftContainer.addEventListener("mouseleave", () => scaleElementOnLeave(leftContainer));
     }
 
     // Hover over Links animation
     links.forEach(link => {
-        link.addEventListener("mouseenter", () => scaleElement(link as HTMLElement, 1.1));
-        link.addEventListener("mouseleave", () => scaleElement(link as HTMLElement, 1));
+        link.addEventListener("mouseenter", () => scaleElementOnEnter(link as HTMLElement));
+        link.addEventListener("mouseleave", () => scaleElementOnLeave(link as HTMLElement));
     });
 
     // Hide or show the right container items

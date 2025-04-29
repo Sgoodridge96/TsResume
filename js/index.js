@@ -5,29 +5,33 @@ document.addEventListener("DOMContentLoaded", function () {
   var links = document.querySelectorAll(".left-container a");
   var rightItems = document.querySelectorAll(".right-container-item");
 
-  // Smooth animations
-  function scaleElement(element, scale) {
-    element.style.transition = "transform 0.3s ease, box-shadow 0.3s ease";
-    element.style.transform = "scale(".concat(scale, ")");
+  // Smooth scale animation when hovering
+  function scaleElementOnEnter(element) {
+    element.style.transition = "transform 0.3s ease";
+    element.style.transform = "scale(1.05)";
+  }
+  function scaleElementOnLeave(element) {
+    element.style.transition = "transform 0.3s ease";
+    element.style.transform = "scale(1)";
   }
 
   // Hover over left container animation
   if (leftContainer) {
     leftContainer.addEventListener("mouseenter", function () {
-      return scaleElement(leftContainer, 1.05);
+      return scaleElementOnEnter(leftContainer);
     });
     leftContainer.addEventListener("mouseleave", function () {
-      return scaleElement(leftContainer, 1);
+      return scaleElementOnLeave(leftContainer);
     });
   }
 
   // Hover over Links animation
   links.forEach(function (link) {
     link.addEventListener("mouseenter", function () {
-      return scaleElement(link, 1.1);
+      return scaleElementOnEnter(link);
     });
     link.addEventListener("mouseleave", function () {
-      return scaleElement(link, 1);
+      return scaleElementOnLeave(link);
     });
   });
 

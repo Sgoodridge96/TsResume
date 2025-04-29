@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Select all project windows
+    // Variable for project windows
     const projectElements = document.querySelectorAll('.project') as NodeListOf<HTMLDivElement>;
     // Handle hover events for project windows
     const handleProjectHoverEffect = (event: MouseEvent) => {

@@ -1,7 +1,7 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Select all project windows
+  // Variable for project windows
   var projectElements = document.querySelectorAll('.project');
   // Handle hover events for project windows
   var handleProjectHoverEffect = function handleProjectHoverEffect(event) {

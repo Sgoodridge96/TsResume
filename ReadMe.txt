@@ -11,11 +11,12 @@ SCSS was used to shape the structure of the webpage and the HTML was used for th
 information about me.
 
     Each page has links to either bring you to my personal GitHub, LinkedIn, and projects, as well as options to also
-download my Resume to look at it for themselves.  I plan to update this as I continue my professional career
+download my Resume to look at it for themselves.  I went with a simple, yet modern design for my Resume website to put more
+emphasis on the projects I've completed and amd currently working on.  I plan to update this as I continue my professional career
 and use the current layout as building blocks for future implementations.  
 
 Challenges:
-    I based this webpage on my old resume I submitted for an old assignment in this class, but in TypeScript instead
+    I based this portfolio website off an old Resume assignment I submitted earlier in the semester, but in TypeScript instead
 of JaveScript.  Moving this website from JavaScript to TypeScript was a bit more of a challenge than I initially anticipated, 
 but overall, the look and feel of the website was what I was aiming for. 
 
